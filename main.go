@@ -1,9 +1,20 @@
 package main
 
-import "github.com/jeziel-almeida/webapi-with-go/server"
+import (
+	"math/rand"
+	"time"
+	"fmt"
+)
 
 func main() {
-	server := server.NewServer()
+	fmt.Print("Enter the limit number: ")
+	var limitNumber int
+	fmt.Scan(&limitNumber)
+	fmt.Println("The sorted number is: ", getRandomNumber(limitNumber))
 
-	server.Run()
+}
+
+func getRandomNumber(limitNumber int) int {
+	rand.Seed(time.Now().Unix())
+	return rand.Intn(limitNumber)
 }
