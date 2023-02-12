@@ -13,7 +13,9 @@
         "editor.fontSize": 18,
         "window.zoomLevel": 1,
         "workbench.colorTheme": "Omni"
-    }
+    },
+
+    "postCreateCommand": "pip install httpie"
 
     //* Docs
     //* https://dev.to/n3wt0n/make-it-perfect-how-to-customize-github-codespaces-2ma4
